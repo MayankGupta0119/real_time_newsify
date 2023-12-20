@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/real_time_newsify/static/css/main.2f612fa9.css",
+    "main.js": "/real_time_newsify/static/js/main.481156f6.js",
+    "static/js/787.221cca78.chunk.js": "/real_time_newsify/static/js/787.221cca78.chunk.js",
+    "index.html": "/real_time_newsify/index.html",
+    "main.2f612fa9.css.map": "/real_time_newsify/static/css/main.2f612fa9.css.map",
+    "main.481156f6.js.map": "/real_time_newsify/static/js/main.481156f6.js.map",
+    "787.221cca78.chunk.js.map": "/real_time_newsify/static/js/787.221cca78.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f612fa9.css",
+    "static/js/main.481156f6.js"
+  ]
+}
