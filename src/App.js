@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, useEffect } from "react";
+import "./App.css";
+import Blogs from "./components/Blogs";
+import Header from "./components/Header";
+import Pageination from "./components/Pageination";
+import { Appcontext } from "./context/Appcontext";
 
 function App() {
+  const { fetchBlogPosts,darkmode,setDarkMode } = useContext(Appcontext);
+  // making the api call using useEffect hook
+  useEffect(() => {
+    fetchBlogPosts();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${darkmode ? "bg-black text-white" : "bg-white text-black"}`}>
+      <Header />
+      <Blogs />
+      <Pageination />
     </div>
   );
 }

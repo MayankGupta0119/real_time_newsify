@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import AppContextProvider from "./context/Appcontext";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <AppContextProvider>
     <App />
-  </React.StrictMode>
+  </AppContextProvider>
+  //here App is the children of AppContextProvider which will be bydefault gets passed to it.
 );
 
 // If you want to start measuring performance in your app, pass a function
