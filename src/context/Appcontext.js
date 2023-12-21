@@ -27,6 +27,7 @@ export default function AppContextProvider({ children }) {
       const data = await result.json();
       console.log("printing in context api file");
       console.log(data.results);
+      console.log(data.results);
       setPosts(data.results);
       const articleNum = data.results.length; //if i use this with hook then there will be no imediate change
       console.log("printing posts");
