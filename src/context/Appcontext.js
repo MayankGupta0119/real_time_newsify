@@ -21,14 +21,14 @@ export default function AppContextProvider({ children }) {
   async function fetchBlogPosts() {
     // 5c8794e116f44ff6a5a0bda43f81e502
     setLoading(true);
-    let url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=a5ffca8e70934ce6bcf9fb9149fba5a4`;
+    let url = `https://newsdata.io/api/1/news?apikey=pub_3515353321ccc03f37f2a251e9ce5abb28acf&country=au,us`;
     try {
       const result = await fetch(url);
       const data = await result.json();
       console.log("printing in context api file");
-      console.log(data.articles);
-      setPosts(data.articles);
-      const articleNum = data.articles.length; //if i use this with hook then there will be no imediate change
+      console.log(data.results);
+      setPosts(data.results);
+      const articleNum = data.results.length; //if i use this with hook then there will be no imediate change
       console.log("printing posts");
       console.log(posts);
       const startIndex = (page - 1) * 4;
